@@ -17,8 +17,6 @@ BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, gnuplot
 
-%define 	_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 CBB is a personal financial management application written in Tcl/Tk
