@@ -1,13 +1,13 @@
 Summary:	An X11 based personal finance manager
 Summary(pl):	Program do zarz±dzania finansami osobistymi
 Name:		cbb
-Version:	0.8.1
+Version:	0.9.5b
 Epoch:		1
-Release:	5
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/cbb/%{name}-%{version}.tar.gz
-# Source0-md5:	7a435ef954c5c2ba209d34ca5fa5c3a7
+# Source0-md5:	d41d8cd98f00b204e9800998ecf8427e
 Source1:	%{name}.1
 Source2:	dialog4duplicate.1
 Patch0:		%{name}-DESTDIR.patch
