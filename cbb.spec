@@ -11,6 +11,8 @@ Group(de):	Applikationen
 Group(pl):	Aplikacje
 URL:		http://cbb.sourceforge.net/
 BuildArch:	noarch
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, gnuplot
 
@@ -32,12 +34,19 @@ modyfikacji kodu.
 %setup -q
 
 %build
-%configure2_13
+rm -f missing
+aclocal
+autoconf
+automake -a -c
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=%{_prefix} install
+%{__make} \
+	prefix=%{_prefix} \
+	DESTDIR=$RPM_BUILD_ROOT \
+	install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
