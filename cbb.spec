@@ -28,10 +28,10 @@ to balance their checkbooks and to add their own reports, graphs, and
 external modules without having to modify any of the CBB source.
 
 %description -l pl
-CBB jest mened¿erem finansów osobistych napisanym w Tcl/Tk i Perlu
-(nie zawiera kompilowanego kodu) i u¿ywa prostego formatu plików z
-danymi. CBB ma prosty interfejs i daje siê ³atwo rozbudowywaæ bez
-modyfikacji kodu.
+CBB jest programem zarzadzaj±cym finansami osobistymi napisanym w
+Tcl/Tk i Perlu (nie zawiera kompilowanego kodu) i u¿ywa prostego
+formatu plików z danymi. CBB ma prosty interfejs i daje siê ³atwo
+rozbudowywaæ bez modyfikacji kodu.
 
 %prep
 %setup -q
