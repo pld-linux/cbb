@@ -4,12 +4,12 @@ Name:		cbb
 Version:	0.8.1
 Epoch:		1
 Release:	5
+License:	GPL
+Group:		Applications
 Source0:	http://cbb.sourceforge.net/down/%{name}-%{version}.tar.gz
 Source1:	%{name}.1
 Source2:	dialog4duplicate.1
 Patch0:		%{name}-DESTDIR.patch
-License:	GPL
-Group:		Applications
 URL:		http://cbb.sourceforge.net/
 BuildArch:	noarch
 BuildRequires:	automake
@@ -29,7 +29,7 @@ external modules without having to modify any of the CBB source.
 
 %description -l pl
 CBB jest mened¿erem finansów osobistych napisanym w Tcl/Tk i Perlu
-(nie zawiera kompilownego kodu) i u¿ywa prostego formatu plików z
+(nie zawiera kompilowanego kodu) i u¿ywa prostego formatu plików z
 danymi. CBB ma prosty interfejs i daje siê ³atwo rozbudowywaæ bez
 modyfikacji kodu.
 
@@ -57,12 +57,14 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE2} $RPM_BUILD_ROOT%{_mandir}/man1
 
+gzip -9nf Announce Bugs FAQ README THANKS Todo Version
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Announce Bugs COPYING FAQ README THANKS Todo Version
+%doc Announce.gz Bugs.gz FAQ.gz README.gz THANKS.gz Todo.gz Version.gz
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/cbb
 %attr(755,root,root) %{_bindir}/dialog4duplicate
