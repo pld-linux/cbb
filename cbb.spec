@@ -2,14 +2,16 @@ Summary:	An X11 based personal finance manager
 Summary(pl):	Program do zarz±dzania finansami osobistymi
 Name:		cbb
 Version:	0.8.1
-Serial:		1
-Release:	3mdk
-Source0:	cbb-0.8.1.tar.gz
+Epoch:		1
+Release:	4
+Source0:	http://cbb.sourceforge.net/down/%{name}-%{version}.tar.gz
 License:	GPL
-Group:		Applications/Productivity
+Group:		Applications
+Group(de):	Applikationen
+Group(pl):	Aplikacje
 URL:		http://cbb.sourceforge.net/
 BuildArch:	noarch
-#BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, gnuplot
 
 
