@@ -7,8 +7,6 @@ Release:	4
 Source0:	http://cbb.sourceforge.net/down/%{name}-%{version}.tar.gz
 License:	GPL
 Group:		Applications
-Group(de):	Applikationen
-Group(pl):	Aplikacje
 URL:		http://cbb.sourceforge.net/
 BuildArch:	noarch
 BuildRequires:	automake
