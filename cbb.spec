@@ -6,7 +6,7 @@ Epoch:		1
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/cbb/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/cbb/%{name}-%{version}.tgz
 # Source0-md5:	d41d8cd98f00b204e9800998ecf8427e
 Source1:	%{name}.1
 Source2:	dialog4duplicate.1
