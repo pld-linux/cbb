@@ -24,7 +24,7 @@ external modules without having to modify any of the CBB source.
 
 %build
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
