@@ -65,6 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/cbb
 %attr(755,root,root) %{_bindir}/dialog4duplicate
+%dir %{_libdir}/cbb
 %attr(755,root,root) %{_libdir}/cbb/*.pl
 %attr(755,root,root) %{_libdir}/cbb/*.tcl
 %{_libdir}/cbb/*.conf
