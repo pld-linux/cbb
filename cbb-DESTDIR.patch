@@ -1,0 +1,12 @@
+--- Makefile.am.orig	Fri Apr 19 21:57:24 2002
++++ Makefile.am	Fri Apr 19 21:57:24 2002
+@@ -34,7 +34,8 @@
+ 
+ install-exec-local:
+ 	$(PERL) install.pl --perlpath $(PERL) --wishpath $(WISH) \
+-		--bindir $(bindir) --libdir $(libdir)/cbb
++		--bindir $(bindir) --libdir $(libdir)/cbb \
++		--destdir $(DESTDIR)$(prefix) --prefix $(prefix)
+ 
+ dist-hook:
+ 	tar cf - docs/cbb-man | (cd $(distdir); tar xvf -)
