@@ -35,7 +35,7 @@ modyfikacji kodu.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
