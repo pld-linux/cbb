@@ -3,8 +3,11 @@ Summary(pl):	Program do zarz±dzania finansami osobistymi
 Name:		cbb
 Version:	0.8.1
 Epoch:		1
-Release:	4
+Release:	5
 Source0:	http://cbb.sourceforge.net/down/%{name}-%{version}.tar.gz
+Source1:	%{name}.1
+Source2:	dialog4duplicate.1
+Patch0:		%{name}-DESTDIR.patch
 License:	GPL
 Group:		Applications
 URL:		http://cbb.sourceforge.net/
@@ -14,6 +17,8 @@ BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, gnuplot
 
+%define 	_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 CBB is a personal financial management application written in Tcl/Tk
@@ -30,6 +35,7 @@ modyfikacji kodu.
 
 %prep
 %setup -q
+%patch -p0
 
 %build
 rm -f missing
@@ -43,8 +49,13 @@ automake -a -c -f
 rm -rf $RPM_BUILD_ROOT
 %{__make} \
 	prefix=%{_prefix} \
+	WISH=/usr/bin/wish \
 	DESTDIR=$RPM_BUILD_ROOT \
 	install
+
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
+install %{SOURCE2} $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,6 +63,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Announce Bugs COPYING FAQ README THANKS Todo Version
+%{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/cbb
 %attr(755,root,root) %{_bindir}/dialog4duplicate
-%{_libdir}/cbb
+%attr(755,root,root) %{_libdir}/cbb/*.pl
+%attr(755,root,root) %{_libdir}/cbb/*.tcl
+%{_libdir}/cbb/*.conf
+%{_libdir}/cbb/*.cat
+%{_libdir}/cbb/contrib
+%{_libdir}/cbb/docs
+%{_libdir}/cbb/graphs
+%{_libdir}/cbb/images
+%{_libdir}/cbb/languages
+%{_libdir}/cbb/reports
