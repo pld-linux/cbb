@@ -57,14 +57,12 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE2} $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf Announce Bugs FAQ README THANKS Todo Version
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Announce.gz Bugs.gz FAQ.gz README.gz THANKS.gz Todo.gz Version.gz
+%doc Announce Bugs FAQ README THANKS Todo Version
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/cbb
 %attr(755,root,root) %{_bindir}/dialog4duplicate
