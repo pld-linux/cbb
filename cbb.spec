@@ -1,4 +1,5 @@
 Summary:	An X11 based personal finance manager
+Summary(pl):	Program do zarz±dzania finansami osobistymi
 Name:		cbb
 Version:	0.8.1
 Serial:		1
@@ -18,6 +19,12 @@ and Perl (it contains no compiled code) and utilizing a simple (tab
 delimited) data file format. CBB provides a simple interface for users
 to balance their checkbooks and to add their own reports, graphs, and
 external modules without having to modify any of the CBB source.
+
+%description -l pl
+CBB jest mened¿erem finansów osobistych napisanym w Tcl/Tk i Perlu
+(nie zawiera kompilownego kodu) i u¿ywa prostego formatu plików z
+danymi. CBB ma prosty interfejs i daje siê ³atwo rozbudowywaæ bez
+modyfikacji kodu.
 
 %prep
 %setup -q
