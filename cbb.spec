@@ -28,7 +28,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=%{_prefix} install
+%{__make} prefix=%{_prefix} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
