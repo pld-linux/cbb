@@ -12,12 +12,13 @@ Source1:	%{name}.1
 Source2:	dialog4duplicate.1
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://cbb.sourceforge.net/
-BuildArch:	noarch
 BuildRequires:	automake
 BuildRequires:	autoconf
+Requires:	gnuplot
+Requires:	tcl >= 7.4
+Requires:	tk >= 4.0
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	tcl >= 7.4, tk >= 4.0, gnuplot
-
 
 %description
 CBB is a personal financial management application written in Tcl/Tk
@@ -46,11 +47,10 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} \
+%{__make} install \
 	prefix=%{_prefix} \
 	WISH=/usr/bin/wish \
-	DESTDIR=$RPM_BUILD_ROOT \
-	install
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
