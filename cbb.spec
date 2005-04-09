@@ -11,7 +11,7 @@ Source0:	http://dl.sourceforge.net/cbb/%{name}-%{version}.tar.gz
 Source1:	%{name}.1
 Source2:	dialog4duplicate.1
 Patch0:		%{name}-DESTDIR.patch
-URL:		http://cbb.sourceforge.net/
+URL:		http://home.gna.org/cbb/
 BuildRequires:	automake
 BuildRequires:	autoconf
 Requires:	gnuplot
