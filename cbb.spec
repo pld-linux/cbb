@@ -35,7 +35,7 @@ rozbudowywaæ bez modyfikacji kodu.
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p0
 
 %build
 rm -f missing
