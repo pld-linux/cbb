@@ -1,5 +1,5 @@
 Summary:	An X11 based personal finance manager
-Summary(pl.UTF-8):   Program do zarządzania finansami osobistymi
+Summary(pl.UTF-8):	Program do zarządzania finansami osobistymi
 Name:		cbb
 Version:	0.8.1
 Epoch:		1
